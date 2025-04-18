@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extensions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    :root {
+      --primary: #050b21;
+      --orange: #f95b55;
+      --br1: 30px;
+      --translucent: #2f3341;
+      --opacque: #5f6578;
+    }
+    body {
+      background-color: var(--primary);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+    .container-auto {
+      max-inline-size: 85vw;
+      margin-inline: auto;
+    }
+    .container-auto2 {
+      background-color: var(--translucent);
+      border-radius: var(--br1);
+      min-inline-size: 100%;
+      max-inline-size: 100%;
+      margin-inline: auto;
+      padding: min(2rem, 5%);
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .container-auto2 span:nth-child(1) {
+      margin-right: auto;
+    }
+    .wrapper {
+      max-height: 100vh;
+      border: 1px solid black;
+    }
+    header {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      align-items: center;
+    }
+    .flex {
+      display: flex;
+    }
+    .logo {
+      margin-right: auto;
+      display:flex;
+      font-size: 1.5vw;
+      gap: 0.5rem;
+      justify-content:center;
+      align-items:center;
+      font-weight: 600;
+      
+    }
+    .logo i{
+        color: var(--orange);
+        font-size: 2vw;
+    }
+    .filter-title {
+      font-size: 1.5vw;
+      color: white;
+      font-weight: 600;
+    }
+    .filter-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+    }
+    .filter {
+      margin: 0 0.5rem;
+      padding: 1rem 1.5rem;
+      background-color: var(--orange);
+      border-radius: var(--br1);
+    }
+    .extension-container {
+      min-height: 90vh;
+    }
+    .cards-container {
+      width: 100%;
+      justify-content: center;
+      padding: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .cards {
+      flex: 1 1 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: min(1rem, 5%);
+      max-height: 200px;
+      border-radius: var(--br1);
+      border: 1px solid rgb(180, 180, 180);
+      background-color: var(--translucent);
+    }
+    
+
+    .action {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .icon {
+      float: left;
+      height: 50px;
+      width: 50px;
+      background-color: var(--opacque);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+    }
+    .btn {
+      padding: 0.6rem 1rem;
+      border-radius: var(--br1);
+      border: 0;
+    }
+    .toggler {
+      background-color: var(--orange);
+    }
+    .content {
+      color: white;
+      display:flex;
+      flex-direction: column;
+      justify-content:flex-start;
+    }
+  </style>
+  <body>
+    <main class="wrapper container-auto">
+      <header>
+        <div class="container-auto2">
+          <div class="logo">
+            <i class="fa-solid fa-fan"></i>
+            <p>Extensions</p>
+          </div>
+          <div class="theme">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+        </div>
+      </header>
+
+      <section class="extension-container">
+        <div class="filter-container flex">
+          <div class="filter-title">
+            <span>Extensions List</span>
+          </div>
+          <div class="filter-wrapper">
+            <span class="filter filter-all">All</span>
+            <span class="filter filter-active">Active</span>
+            <span class="filter filter-inactive">Inactive</span>
+          </div>
+        </div>
+        <div class="cards-container">
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+          <div class="cards card-1">
+            <div class="content-container">
+              <div class="icon">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="content">
+                <h2>DevLens</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+                  cupiditate veritatis omnis?
+                </p>
+              </div>
+            </div>
+            <div class="action">
+              <button class="btn btn-remove">Remove</button>
+              <button class="btn toggler">Toggle</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
